@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
 import router from './router'
-// 1. 引入你需要的组件
-import Vant from 'vant'
-// 2. 引入组件样式
-import 'vant/lib/index.css'
+import store from './store'
 // 加载全局样式
 import './styles/index.less'
 // 加入移动端rem匹配
 import 'amfe-flexible'
-Vue.use(Vant)
-
+import './utils/vant'
 Vue.config.productionTip = false
 
 new Vue({
