@@ -3,6 +3,17 @@
   /* Project id 3778818 */
   src: url('//at.alicdn.com/t/c/font_3778818_r2xtyr25c0m.woff2?t=1668750868259') format('woff2'), url('//at.alicdn.com/t/c/font_3778818_r2xtyr25c0m.woff?t=1668750868259') format('woff'), url('//at.alicdn.com/t/c/font_3778818_r2xtyr25c0m.ttf?t=1668750868259') format('truetype');
 }
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.van-nav-bar {
+  background-color: #3196fa !important;
+}
+.van-nav-bar .van-nav-bar__title {
+  color: #fff !important;
+}
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;

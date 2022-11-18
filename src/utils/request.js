@@ -1,6 +1,6 @@
 import axios from 'axios'
 const request = axios.create({
-  baseUlr: 'http://ttapi.research.itcast.cn/'
+  baseUlr: 'http://toutiao.itheima.net/'
 })
 // 请求拦截器
 

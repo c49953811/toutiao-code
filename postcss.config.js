@@ -4,7 +4,9 @@ module.exports = {
       // 能够把所有元素的px单位转成Rem
       // rootValue: 转换px的基准值。
       // 例如一个元素宽是75px，则换成rem之后就是2rem。
-      rootValue: 37.5,
+      rootValue({ file }) {
+        return file.indexOf('vant') !== -1 ? 37.5 : 75
+      },
       propList: ['*']
     }
   }
