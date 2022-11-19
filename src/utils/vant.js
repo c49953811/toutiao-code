@@ -12,10 +12,17 @@ import {
   Row,
   Icon,
   Cell,
-  CellGroup
+  CellGroup,
+  CountDown,
+  Grid,
+  GridItem,
+  Dialog
 } from 'vant'
 
 Vue.use(Cell)
+Vue.use(Dialog)
+Vue.use(Grid)
+Vue.use(GridItem)
 Vue.use(CellGroup)
 Vue.use(Icon)
 Vue.use(Col)
@@ -28,3 +35,4 @@ Vue.use(Button)
 Vue.use(Form)
 Vue.use(Field)
 Vue.use(NavBar)
+Vue.use(CountDown)
