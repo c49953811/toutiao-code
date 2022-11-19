@@ -9,6 +9,9 @@ import './styles/index.less'
 // import 'vant/lib/index.css'
 // 加入移动端rem匹配
 import 'amfe-flexible'
+
+// 加载day.js 初始化
+import '@/utils/dayjs'
 Vue.config.productionTip = false
 
 new Vue({
