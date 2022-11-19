@@ -16,10 +16,18 @@ import {
   CountDown,
   Grid,
   GridItem,
-  Dialog
+  Dialog,
+  Tab,
+  Tabs,
+  List,
+  PullRefresh
 } from 'vant'
 
 Vue.use(Cell)
+Vue.use(PullRefresh)
+Vue.use(List)
+Vue.use(Tab)
+Vue.use(Tabs)
 Vue.use(Dialog)
 Vue.use(Grid)
 Vue.use(GridItem)
