@@ -20,9 +20,13 @@ import {
   Tab,
   Tabs,
   List,
-  PullRefresh
+  PullRefresh,
+  Popup,
+  Search
 } from 'vant'
 
+Vue.use(Search)
+Vue.use(Popup)
 Vue.use(Cell)
 Vue.use(PullRefresh)
 Vue.use(List)

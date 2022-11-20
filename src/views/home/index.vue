@@ -8,6 +8,7 @@
         round
         icon="search"
         class="search-btn"
+        to="/search"
         >搜索</van-button
       >
     </van-nav-bar>
@@ -22,16 +23,35 @@
       </van-tab>
       <!-- 图标 -->
       <div slot="nav-right" class="placeholder"></div>
-      <div slot="nav-right" class="hamburger-btn">
+      <div
+        slot="nav-right"
+        class="hamburger-btn"
+        @click="ischannelEditShow = true"
+      >
         <i class="toutiao toutiao-gengduo"></i>
       </div>
     </van-tabs>
+    <!-- 频道编辑弹出层 -->
+    <van-popup
+      v-model="ischannelEditShow"
+      closeable
+      close-icon-position="top-left"
+      position="bottom"
+      :style="{ height: '100%' }"
+    >
+      <channel-edit
+        :my-channels="channels"
+        :active="activeName"
+        @updata-active="onUpdataActive"
+      />
+    </van-popup>
   </div>
 </template>
 
 <script>
 import { getAllChannelsAPI } from '@/api'
 import ArticleList from './components/article-list.vue'
+import ChannelEdit from './components/chaanel-edit.vue'
 import { mapState } from 'vuex'
 import { getItem } from '@/utils/storage'
 export default {
@@ -39,7 +59,8 @@ export default {
   data() {
     return {
       activeName: 0,
-      channels: []
+      channels: [],
+      ischannelEditShow: false
     }
   },
   methods: {
@@ -68,6 +89,10 @@ export default {
       } catch (err) {
         this.$toast('获取频道数据失败')
       }
+    },
+    onUpdataActive(index, ischannelEditShow = true) {
+      this.activeName = index
+      this.ischannelEditShow = ischannelEditShow
     }
   },
   watch: {},
@@ -79,7 +104,8 @@ export default {
   },
   mounted() {},
   components: {
-    ArticleList
+    ArticleList,
+    ChannelEdit
   }
 }
 </script>
