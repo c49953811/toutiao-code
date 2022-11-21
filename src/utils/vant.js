@@ -22,10 +22,18 @@ import {
   List,
   PullRefresh,
   Popup,
-  Search
+  Search,
+  Loading,
+  Divider,
+  Picker,
+  DatetimePicker
 } from 'vant'
 
 Vue.use(Search)
+Vue.use(Picker)
+Vue.use(DatetimePicker)
+Vue.use(Divider)
+Vue.use(Loading)
 Vue.use(Popup)
 Vue.use(Cell)
 Vue.use(PullRefresh)
